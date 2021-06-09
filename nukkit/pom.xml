@@ -9,33 +9,9 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>donation-store-velocity</artifactId>
-    <version>2.3</version>
+    <artifactId>donation-store-nukkit</artifactId>
 
     <dependencies>
-        <!-- Velocity -->
-        <dependency>
-            <groupId>com.velocitypowered</groupId>
-            <artifactId>velocity-api</artifactId>
-            <type>jar</type>
-            <scope>provided</scope>
-        </dependency>
-
-        <!-- Configurate -->
-        <dependency>
-            <groupId>org.spongepowered</groupId>
-            <artifactId>configurate-core</artifactId>
-            <version>3.6</version>
-            <scope>compile</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.spongepowered</groupId>
-            <artifactId>configurate-hocon</artifactId>
-            <version>3.6</version>
-            <scope>compile</scope>
-        </dependency>
-
-        <!-- Other -->
         <dependency>
             <groupId>net.donationstore</groupId>
             <artifactId>common</artifactId>
@@ -45,6 +21,16 @@
         <dependency>
             <groupId>com.fasterxml.jackson.datatype</groupId>
             <artifactId>jackson-datatype-jdk8</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>cn.nukkit</groupId>
+            <artifactId>nukkit</artifactId>
+            <version>1.0-SNAPSHOT</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.squareup.okhttp3</groupId>
+            <artifactId>okhttp</artifactId>
         </dependency>
     </dependencies>
 
@@ -81,4 +67,5 @@
             </plugin>
         </plugins>
     </build>
+
 </project>

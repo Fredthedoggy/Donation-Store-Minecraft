@@ -1,20 +1,20 @@
-package net.donationstore.bukkit;
+package net.donationstore.nukkit;
 
-import net.donationstore.bukkit.command.CommandHandler;
-import net.donationstore.bukkit.logging.Log;
-import net.donationstore.bukkit.queue.QueueTask;
+import cn.nukkit.command.Command;
+import cn.nukkit.command.CommandSender;
+import cn.nukkit.plugin.PluginBase;
+import cn.nukkit.utils.Config;
 import net.donationstore.logging.Logging;
-import org.bukkit.command.Command;
-import org.bukkit.command.CommandSender;
-import org.bukkit.configuration.file.FileConfiguration;
-import org.bukkit.plugin.Plugin;
-import org.bukkit.plugin.java.JavaPlugin;
 
-public class DonationStorePlugin extends JavaPlugin {
+import net.donationstore.nukkit.command.CommandHandler;
+import net.donationstore.nukkit.logging.Log;
+import net.donationstore.nukkit.queue.QueueTask;
 
-    private Plugin plugin;
+public class DonationStorePlugin extends PluginBase {
+
+    private PluginBase plugin;
     private QueueTask queueTask;
-    private FileConfiguration config;
+    private Config config = getConfig();
     private CommandHandler commandHandler;
 
     @Override
@@ -22,11 +22,9 @@ public class DonationStorePlugin extends JavaPlugin {
 
         plugin = this;
 
-        Log.toConsole(String.format(Logging.enableLog(), "Bukkit", "v2.3"));
+        Log.toConsole(String.format(Logging.enableLog(), "Nukkit", "v2.3"));
 
         config = plugin.getConfig();
-
-        config.options().copyDefaults();
 
         if (config.getInt("queue_delay") == 0) {
             config.set("queue_delay", 180);

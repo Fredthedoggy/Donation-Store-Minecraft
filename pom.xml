@@ -13,6 +13,7 @@
         <module>velocity</module>
         <module>bukkit</module>
         <module>sponge</module>
+        <module>nukkit</module>
         <module>common</module>
     </modules>
 
@@ -37,6 +38,10 @@
             <id>sponge-repo</id>
             <name>Sponge Maven Repository</name>
             <url>https://repo.spongepowered.org/maven</url>
+        </repository>
+        <repository>
+            <id>nukkit-repo</id>
+            <url>https://repo.nukkitx.com/maven-snapshots</url>
         </repository>
     </repositories>
 
