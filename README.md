@@ -2,10 +2,11 @@
 This is the official repo for the Donation Store (Java Based) Minecraft plugins. As of now the following servers are
 supported:
 
-- Spigot
-- Bungeecord
-- Velocity
+- Bukkit (Spigot, Paper, etc)
 - Sponge
+- NukkitX
+- Bungeecord (BungeeCord / Waterfall)
+- Velocity
 
 Compared to the previous version of the plugin, it has been completely rewritten and modularised, so, where possible,
 most of the functionality that is common across all the above plugins is in the common library.
